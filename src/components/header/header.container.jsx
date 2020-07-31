@@ -12,9 +12,11 @@ const GET_CLIENT_PROPERTIES = gql`
 
 const HeaderContainer = () => (
   <Query query={GET_CLIENT_PROPERTIES}>
-    {({ data: { cartHidden } }) => (
-      <Header hidden={cartHidden} />
-    )}
+    {
+      ({ data: { cartHidden } }) => (
+        <Header hidden={cartHidden} />
+      )
+    }
   </Query>
 );
 
